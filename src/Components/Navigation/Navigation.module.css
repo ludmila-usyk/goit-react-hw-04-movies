@@ -1,0 +1,16 @@
+.ActiveLink {
+color: #f0dcfa;
+};
+
+.Link {
+color: blueviolet;
+};
+
+.list {
+margin: 0;
+padding: 20px;
+list-style: none;
+display: flex;
+justify-content: space-evenly;
+font-size: 26px;
+};
