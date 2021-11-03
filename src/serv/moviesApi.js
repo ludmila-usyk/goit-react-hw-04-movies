@@ -25,11 +25,12 @@ export function fetchGetMovieDetails(movieId) {
     `${BASE_URL}/movie/${movieId}?api_key=${API_KEY}&language=en-US`
   );
 }
-// export function fetchGetMovieCredits(movieId) {
-//   return fetchWithErrorHandling(
-//     `${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}&language=en-US`
-//   );
-// }
+
+export function fetchGetMovieCredits(movieId) {
+  return fetchWithErrorHandling(
+    `${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}&language=en-US`
+  );
+}
 
 export function fetchGetMovieReviews(movieId) {
   return fetchWithErrorHandling(

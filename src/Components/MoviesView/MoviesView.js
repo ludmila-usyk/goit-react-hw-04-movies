@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { useLocation, useHistory } from "react-router-dom";
-
 import MoviesPage from "../components/MoviesPage/MoviesPage.js";
 import MoviesList from "../components/MoviesList/MoviesList";
 import { fetchSearchMovies } from "../serv/moviesApi";

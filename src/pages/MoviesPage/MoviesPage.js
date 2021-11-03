@@ -4,11 +4,10 @@ import s from "./MoviesPage.module.css";
 
 
 function MoviesPage ({ onSubmit }) {
-    
     const [searchQuery, setSearchQuery] = useState("");
 
-    const handleInputChange = (event) => {
-      setSearchQuery(event.target.value.toLowerCase());
+    const handleInputChange = (e) => {
+      setSearchQuery(e.target.value.toLowerCase());
     };
   
     const handleSubmit = (e) => {
@@ -18,9 +17,9 @@ function MoviesPage ({ onSubmit }) {
         alert("Please add search query");
         return;
       }
-onSubmit(searchQuery);
-    };
 
+      onSubmit(searchQuery);
+    };
     return (
     <form onSubmit={handleSubmit} className={s.movieForm}>
         <label>
@@ -31,8 +30,8 @@ onSubmit(searchQuery);
                 placeholder="Search movie"
                 onChange={handleInputChange}
                 value={searchQuery}
-                className={s.movieSearch}>
-            </input>
+                className={s.movieSearch}
+            ></input>
         </label>
         <button type="submit" className={s.movieButton}>
             Search
@@ -41,12 +40,11 @@ onSubmit(searchQuery);
     )
 }
 
-
 MoviesPage.propTypes = {
     value: PropTypes.string,
     handleSubmit: PropTypes.func,
     handleInputChange: PropTypes.func,
-    onSubmit: PropTypes.func.isRequired
+    onSubmit: PropTypes.func.isRequired,
 };
 
 export default MoviesPage;

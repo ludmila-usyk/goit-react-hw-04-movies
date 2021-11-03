@@ -1,15 +1,15 @@
-import {useState, useEffect, Suspense } from 'react';
+import {useState, useEffect, Suspense, lazy } from 'react';
 import { Route, NavLink, useParams, useRouteMatch, useHistory, useLocation } from 'react-router-dom';
 import { fetchGetMovieDetails } from '../../serv/moviesApi.js';
 import { Load } from '../../Components/Loader/Loader.js';
 import s from "./MovieDetailsPage.module.css";
 
-// const Review = lazy(() =>
-//   import("./ReviewsView" /* webpackChunkName: "review-view" */)
-// );
-// const Cast = lazy(() =>
-//   import("./CastView" /* webpackChunkName: "cast-view" */)
-// );
+const Review = lazy(() =>
+  import("../../Components/ReviewsView/ReviewsView.js" /* webpackChunkName: "review-view" */)
+);
+const Cast = lazy(() =>
+  import("../../Components/CastView/CastView.js" /* webpackChunkName: "cast-view" */)
+);
 
 
 export default function MovieDetailsPage() {
@@ -96,10 +96,10 @@ export default function MovieDetailsPage() {
             </div>
             <Suspense fallback={<Load />}>
               <Route path={`${path}/cast`}>
-                {/* <Cast movieId={movieId} /> */}
+                <Cast movieId={movieId} />
               </Route>
               <Route path={`${path}/reviews`}>
-                {/* <Review movieId={movieId} /> */}
+                <Review movieId={movieId} />
               </Route>
             </Suspense>
           </>
