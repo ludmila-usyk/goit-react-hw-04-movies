@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation, useHistory } from "react-router-dom";
-import MoviesPage from "../components/MoviesPage/MoviesPage.js";
-import MoviesList from "../components/MoviesList/MoviesList";
+import MoviesPage from "../../pages/MoviesPage/MoviesPage.js"; 
+import MoviesList from "../Components/MoviesList/MoviesList";
 import { fetchSearchMovies } from "../serv/moviesApi";
 
 export default function Movies() {
@@ -49,7 +49,7 @@ export default function Movies() {
 
   return (
     <>
-      <MoviesPage onSubmit={onSubmit} />
+      <MoviesPage onSubmit={onSubmit}/>
       {movies && <MoviesList movies={movies} />}
     </>
   );

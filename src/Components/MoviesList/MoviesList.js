@@ -15,8 +15,7 @@ export default function MoviesList({ movies }) {
                   location,
                 },
               },
-            }}
-          >
+            }}>
             {movie.title}
           </Link>
         </li>

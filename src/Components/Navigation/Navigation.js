@@ -6,7 +6,6 @@ export default function Navigation() {
     return (
     <nav>
       <ul className={s.list}>
-        {/* <ul style={{color: "red"}}> */}
         <li>
         <NavLink
           exact 
