@@ -1,0 +1,22 @@
+.movie{
+    display: flex;
+    align-items: stretch;
+}
+
+.moviePage{
+    padding: 0 30px;
+}
+
+.movieBack{
+    letter-spacing: 2px;
+    min-height: 30px;
+    min-width: 100px;
+    cursor: pointer;
+    margin: 25px;
+    color: teal;
+    border-color: blueviolet;
+}
+
+.movieInfo{
+    color: teal;
+}
