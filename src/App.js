@@ -4,7 +4,6 @@ import {Load} from './Components/Loader/Loader.js';
 import {React, Suspense, lazy } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-
 const HomePage = lazy(() =>
   import(
     "./pages/HomePage/HomePage.js" /* webpackChunkName: "home-page" */),
